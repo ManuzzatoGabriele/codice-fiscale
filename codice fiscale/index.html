@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Codice Fiscale</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <form action="">
+        <div id="header">
+            <img src="img/emblema.png" alt="emblema italiano">
+            <h1>Calcolo Codice Fiscale</h1>
+        </div>
+
+        <div id="input">
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" placeholder="Inserire cognome" required> <br>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Inserire nome" required> <br>
+
+            <label for="data">Data di nascita:</label>
+            <input type="date" id="data" required><br>
+
+            <label for="sesso">Sesso</label>
+            <select id="sesso">
+                <option value="">Selezionare sesso</option>
+                <option value="m">Maschio</option>
+                <option value="f">Femmina</option>
+            </select> <br>
+
+            <!-- this => l'elemento HTML <input> di tipo file su cui si sta verificando l'evento onchange-->
+            <input type="file" id="input_file" value="choose file" onchange="showFile(this)">  
+            <br>
+            <!-- display content-->       
+            <input type="text" id="out" style="display: none;">
+            
+            <select id="mySelect" size="1" style="margin-top: 10px;">
+                <option>PAESE</option>
+            </select>
+
+            
+        </div>
+
+        <p id="risposta"></p>
+
+        <button type="button" onclick="calcola()">Genera</button>
+    </form>
+    
+</body>
+</html>
